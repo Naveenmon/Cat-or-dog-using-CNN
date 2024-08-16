@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cat or Dog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cat or Dog Prediction</h1>
+        </header>
+        <main>
+            <form method="POST" action="{{ url_for('home') }}" id="upload-form" enctype="multipart/form-data">
+                <label for="file-upload" class="upload-btn">Choose a Picture</label>
+                <input type="file" name="image" id="file-upload" accept="image/*">
+                <button type="submit" class="predict-btn">Predict</button>
+            </form>
+
+        </main>
+    </div>
+</body>
+</html>
